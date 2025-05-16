@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Дневник</title>
+    <link rel="stylesheet" href="design.css">
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 2.5em;">Мой Дневник</h1> <!-- Увеличиваем размер заголовка -->
+    </header>
+
+    <main>
+        <div id="new-entry">
+            <textarea id="note-text" placeholder="Введите вашу заметку..."></textarea>
+            <button id="save-button">Сохранить</button>
+        </div>
+
+        <div id="entries">
+            <!-- Здесь будут отображаться записи -->
+        </div>
+    <div id="filter-date">
+    <label for="date-filter">Фильтр по дате:</label>
+    <input type="date" id="date-filter">
+    <button id="filter-button">Фильтр</button>
+    </div>
+    <div id="search">
+    <input type="text" id="search-input" placeholder="Поиск...">
+    <button id="search-button">Найти</button>
+</div>
+    </main>
+
+    <footer>
+    
+    <p>© 2025 Мой Дневник</p>
+   
+    </footer>
+
+    <script src="calendar.js"></script>
+</body>
+</html>

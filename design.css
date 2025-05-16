@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+header, footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#new-entry textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Очень важно! */
+}
+
+#new-entry button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#entries {
+    margin-top: 20px;
+}
+
+.entry {
+   background-color: white;
+   border: 1px solid #ddd;
+   padding: 15px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   transition: transform 0.2s; /* Плавный переход при наведении */
+}
+
+.entry:hover {
+   transform: scale(1.02); /* Увеличение при наведении */
+}
+
+.entry .date {
+   font-size: 0.8em;
+   color: #777;
+   margin-bottom: 5px;
+}
+
+/* Стили для кнопок редактирования и удаления */
+.entry button {
+   background-color: #d9534f; /* Красный цвет */
+   color: white;
+   padding: 5px 10px;
+   border-radius: 3px; 
+   margin-left: 10px; 
+}
+
+/* Иконки для кнопок */
+.entry button.edit-button::before {
+   content: "\f044"; /* Иконка редактирования из Font Awesome */
+   font-family: "Font Awesome\ Pro";
+   margin-right: 5px; 
+}
+
+.entry button.delete-button::before {
+   content: "\f00d"; /* Иконка удаления из Font Awesome */
+   font-family: "Font Awesome\ Pro";
+   margin-right: 5px; 
+}
