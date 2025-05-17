@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Вход в Дневник</title>
+<link rel="stylesheet" href="design.css" />
+</head>
+<body>
+<header>
+    <h1 style="font-size: 2.5em;">Вход в Мой Дневник</h1>
+</header>
+
+<main style="text-align: center; margin-top: 50px;">
+    <form id="login-form" style="display:inline-block; text-align:left;">
+        <label for="username">Логин:</label><br>
+        <input type="text" id="username" required><br><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" required><br><br>
+        <button type="submit">Войти</button>
+    </form>
+    <p id="error-message" style="color:red; margin-top:10px;"></p>
+</main>
+
+<footer>
+    <p>© 2025 Мой Дневник</p>
+</footer>
+
+<script>
+// Простая проверка логина и пароля
+const validCredentials = {
+    username: 'user', // Можно заменить на свои данные
+    password: 'password123'
+};
+
+document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username === validCredentials.username && password === validCredentials.password) {
+        // Успешная авторизация
+        localStorage.setItem('isAuthenticated', 'true');
+        window.location.href = 'notebook.html'; // Перенаправление на дневник
+    } else {
+        document.getElementById('error-message').textContent = 'Неверный логин или пароль.';
+    }
+});
+</script>
+
+</body>
+</html>
